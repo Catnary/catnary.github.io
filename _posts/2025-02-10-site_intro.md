@@ -2,7 +2,7 @@
 title: Site intro
 date: 2025-02-10 13:13:00 +/-0000
 categories: [notes]
-tags: [jekyll]     # TAG names should always be lowercase
+tags: [jekyll, learning]     # TAG names should always be lowercase
 description: Setting up this site.
 toc: false
 comments: false
