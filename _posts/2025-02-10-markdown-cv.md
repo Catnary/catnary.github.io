@@ -12,7 +12,7 @@ pin: false
 
 I rarely use Word for anything these days. When very occasionally I do need something in `.docx` or `.pdf` format, the thing I enjoy least is messing around with the formatting in Word to make it look presentable.
 
-CVs are the worst for this. Fixed-term employment means I need to apply for new roles fairly regularly, so I wanted to figure out an efficient workflow for outputting a presentable CV and covering letter in PDF format from markdown files.
+Most recruitment workflows involve having to submit Word or PDF files so I wanted to figure out an efficient workflow for outputting a presentable CV and covering letter in PDF format from markdown files.
 
 The following is what I came up with. It's not the most streamlined process, but (unusually for me) I'm happy with this not being more automated.
 

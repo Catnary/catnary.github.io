@@ -6,7 +6,7 @@ tags: [jekyll, learning]     # TAG names should always be lowercase
 description: Setting up this site.
 toc: false
 comments: false
-pin: false
+pin: true
 #media_subpath: /path/to/media/
 ---
 
