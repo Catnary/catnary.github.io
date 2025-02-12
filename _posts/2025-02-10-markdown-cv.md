@@ -10,17 +10,19 @@ pin: false
 #media_subpath: /path/to/media/
 ---
 
-I rarely use Word for anything these days. When very occasionally I do need something in `.docx` or `.pdf` format, the thing I enjoy least is messing around with the formatting in Word to make it look presentable.
+I rarely use Word these days. When very occasionally I do need something in `.docx` or `.pdf` format, the thing I enjoy least is messing around with the formatting in Word to make it look presentable.
 
-Most recruitment workflows involve having to submit Word or PDF files so I wanted to figure out an efficient workflow for outputting a presentable CV and covering letter in PDF format from markdown files.
+Most recruitment workflows involve having to submit Word or PDF files so I wanted to figure out a simple method for turning markdown into a presentable CV and covering letter in PDF format.
 
-The following is what I came up with. It's not the most streamlined process, but (unusually for me) I'm happy with this not being more automated.
+The following is what I came up with. It's not the most elegant process, but (unusually for me) I'm ok with this not being more automated.
+
+tl;dr: I have markdown template file that I edit, then pass that and a CSS stylesheet to Pandoc and Weasyprint to output a formatted PDF.
 
 ## Tools
 
 **A Linux environment and markdown editor**: I built upon an existing VSCode devcontainer I'd created for other Pandoc tasks. 
 
-**[Pandoc](https://pandoc.org/)**: This is a super-useful tool for converting files to/from different markdown formats. Depending on your flavour of linux, this can be installed with:
+**[Pandoc](https://pandoc.org/)**: This is a really useful tool for converting files to/from different markdown formats. Depending on your flavour of linux, this can be installed with:
 
 ```sh
 sudo apt install pandoc
@@ -53,9 +55,9 @@ For other Linux flavours, installation is a bit more involved, as described in t
 
 I created two template files: A markdown file for the content, and a CSS stylesheet.
 
-I also have a big markdown file containing all the details of my employment history, qualifications, CPD projects and courses. This is structured like a CV but far too long to work as one. 
+I also have a big markdown file containing all the details of my employment history, qualifications, CPD projects and courses. This is structured like a CV but far too long.
 
-When I need to generate a new CV, I create a new directory in my git repo and add copies of the CSS and markdown template files. I copy/paste the relevant bits of content from the big reference markdown file, and when I'm happy with the content I generate the PDF:
+When I need to generate a new CV, I create a new subdir in my git repo and add copies of the CSS and markdown template files. I copy/paste the relevant bits of content from the big reference markdown file, and when I'm happy-ish (I'm never really happy with CVs. I find the whole process of self-promotion incredibly awkward), I generate the PDF:
 
 In the terminal, cd into the directory with the files then run the following command:
 
@@ -78,7 +80,7 @@ My markdown template looks something like the example below. Things like job tit
 
 ## Professional Summary
 
-Some words about me and my work
+Some words about myself that I probably found really awkward to write.
 
 ---
 
@@ -97,32 +99,26 @@ Some words about me and my work
 
 ### Job Title - Company
 #### _Date from - Date to, Location_
-- Some 
-- things
-- I 
-- did
+- A thing I did
+- Another thing I did
+
 
 ### Job Title - Company
 #### _Date from - Date to, Location_
-- Some 
-- things
-- I 
-- did
+- A thing I did
+- Another thing I did
 
 ---
 
 ## Qualifications
 - **Qual1** - Institution - Date
 - **Qual2** - Institution - Date
-- **Qual3** - Institution - Date
 
 ---
 
 ## CPD
-- Some
-- things
-- I
-- did
+- An interesting workshop I attended
+- A professional development certificate
 
 ```
 
@@ -240,4 +236,4 @@ h5 {
 ```
 This produces a CV in PDF format with a layout I'm happy with, and I get to work in markdown and keep track of everything in git.
 
-Of course, you could automate this workflow further and add API calls to an AI agent, to e.g., insert relevant content based on the big reference markdown file, or review the CV in relation to the job spec. It would be interesting to experiment with that, but its not something I really want for my own purposes right now.
+Of course, you could automate this workflow further and add API calls to an AI agent, to e.g., insert relevant content based on the big reference markdown file, or review the CV in relation to a copy of the job spec. It would be interesting to experiment with that, but its not something I really want for my own purposes right now.
