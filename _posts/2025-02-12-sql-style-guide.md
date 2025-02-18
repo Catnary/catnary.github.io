@@ -17,11 +17,11 @@ There are plenty of style guides available, including those from [Google](https:
 
 Languages like Java are always well represented, and of course Python has it's own [PEP-8 style guide](https://peps.python.org/pep-0008/), but SQL rarely makes it onto these lists. With providers like Snowflake and dbt advocating for use of consistent styling (in part because case-sensitivity and whitespace are starting to matter more in modern SQL tools) this may change. For now, of the few publicly available SQL style guides, the most well-known  - and hotly debated - is still [Simon Holywell's](https://www.sqlstyle.guide/), which is over 10 years old, and forked over 1.4k times on GitHub.
 
-His follow-up post [SQL style guide misconceptions](https://www.simonholywell.com/post/2016/12/sql-style-guide-misconceptions/?utm_source=sqlstyle.guide-sqlstyle.guide&utm_medium=link&utm_campaign=footer-link) addresses most of the objections - and conveys his understandable frustration at the criticism - very clearly. However, [new readers continue to be outraged](https://www.reddit.com/r/programming/comments/1gr2jpg/sql_style_guide_by_simon_holywell/). That's people for you.
+His follow-up post [SQL style guide misconceptions](https://www.simonholywell.com/post/2016/12/sql-style-guide-misconceptions/?utm_source=sqlstyle.guide-sqlstyle.guide&utm_medium=link&utm_campaign=footer-link) addresses most of the objections - and conveys his understandable frustration at the criticism - very clearly. However, [new readers continue to be outraged](https://www.reddit.com/r/programming/comments/1gr2jpg/sql_style_guide_by_simon_holywell/).
 
 Most IDEs will support SQL formatting and linting these days, but codebases of poorly formatted SQL can still be a challenge. Fully expecting (and indeed receiving) a similar backlash, I had a go at writing my own version for a recent project. 
 
-It was intended as a starting point for discussion, not a finished document, but the process of putting it together forced me to think hard about SQL best practices generally, so it was definitely a worthwhile exercise.
+It was intended as a starting point for discussion rather than a finished guide. The process of putting it together gave me the opportunity to think carefully about SQL best practices generally.
 
 ---
 # SQL Style Guide
